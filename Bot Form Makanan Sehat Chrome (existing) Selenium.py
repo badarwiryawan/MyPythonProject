@@ -1,3 +1,6 @@
+#Unduh ChromeDriver sesuai versi browser, dapat diperoleh di https://chromedriver.chromium.org/downloads.
+#Install library yang ada di bawah.
+
 #----------------------INPUT DAN RUNNING INI TERLEBIH DAHULU SECARA BERURUTAN DI COMMAND PROMPT. SESUAIKAN DIRECTORY-NYA----------------------------
 #cd C:\Program Files\Google\Chrome\Application
 #chrome.exe --remote-debugging-port=9393 chrome.exe --user-data-dir="D:\Programming\Chromeprofile"
