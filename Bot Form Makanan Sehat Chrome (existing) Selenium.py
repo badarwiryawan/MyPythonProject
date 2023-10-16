@@ -1,3 +1,7 @@
+#----------------------INPUT DAN RUNNING INI TERLEBIH DAHULU SECARA BERURUTAN DI COMMAND PROMPT. SESUAIKAN DIRECTORY-NYA----------------------------
+#cd C:\Program Files\Google\Chrome\Application
+#chrome.exe --remote-debugging-port=9393 chrome.exe --user-data-dir="D:\Programming\Chromeprofile"
+
 import selenium
 import os
 import pyautogui
@@ -9,9 +13,6 @@ from selenium.webdriver.common.by import By
 os.environ['PATH']+="D:\Programming"
 opt=Options()
 tanggal = input("Masukkan Tanggal: ")
-
-#cd C:\Program Files\Google\Chrome\Application
-#chrome.exe --remote-debugging-port=9393 chrome.exe --user-data-dir="D:\Programming\Chromeprofile"
 
 opt.add_experimental_option("debuggerAddress", "localhost:9393")
 driver=webdriver.Chrome(options=opt)
