@@ -14,6 +14,7 @@ Periods = int(input("Masukkan Lamanya Tahun: "))
 #-------------------KALKULATOR VALUASI PENDEKATAN DISCOUNTED CASH FLOW OLEH BADAR WIRYAWAN------------------
 
 def pendekatan_discounted_cash_flow(Pendapatan=Net_Income, Inkremental=Increment, Tingkat_Diskonto=Discount_Rate, Periode=Periods):
+    
     Daftar_Pendapatan = []
 
     for n in range(Periode):
