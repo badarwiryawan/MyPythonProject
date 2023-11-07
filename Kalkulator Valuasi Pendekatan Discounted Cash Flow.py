@@ -20,7 +20,7 @@ def pendekatan_discounted_cash_flow(Pendapatan=Net_Income, Inkremental=Increment
 
     Daftar_Pendapatan = []
 
-    for b in range(Periode):
+    for a in range(Periode):
         Daftar_Pendapatan.append(Pendapatan)
         Pendapatan += Inkremental
 
