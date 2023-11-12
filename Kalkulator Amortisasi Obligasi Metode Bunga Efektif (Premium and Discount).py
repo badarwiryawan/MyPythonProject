@@ -80,16 +80,3 @@ def kalkulasi_obligasi(Face_value=Nilai_Nominal, Nominal_interest=Bunga_Nominal,
 print(kalkulasi_obligasi())
 
 #---------------------------------------------------------KALKULATOR AMORTISASI OBLIGASI METODE BUNGA EFEKTIF OLEH BADAR WIRYAWAN------------------------------------------------------------------------
-
-
-
-    
-
-    
-
-    
-
-
-    
-
-
