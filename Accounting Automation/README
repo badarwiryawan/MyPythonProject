@@ -1,1 +1,4 @@
+Hi, welcome to my accounting automation project.
 
+This was originally coded by me, who's currently an Accounting Student at Diponegoro University.
+You could freely use the program by launching it on the code editor. I recommend Visual Studio Code, but you have to install Python and related libraries. The alternative is Google Colab that have built-in Pandas.
