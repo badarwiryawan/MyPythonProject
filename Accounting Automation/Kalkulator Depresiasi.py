@@ -10,7 +10,7 @@ import pandas as pd
 Nilai_aset = float(input("Masukkan nilai perolehan aset: "))
 Nilai_residu = float(input("Masukkan nilai residu aset: "))
 Masa_manfaat = int(input("Masukkan estimasi masa manfaat aset: "))
-Metode_Depresiasi = input("Pilih Metode Depresiasi (Garis Lurus = 1, Jumlah Digit Tahun = 2, Penurunan Berganda = 3): ")
+Metode_Depresiasi = input("Pilih Metode Depresiasi (Garis Lurus = 1, Jumlah Digit Tahun = 2): ")
 
 #---------------------------------------------------------KALKULATOR DEPRESIASI OLEH BADAR WIRYAWAN-----------------------------------------------------------
 
@@ -152,75 +152,9 @@ def depresiasi_sum_of_year_digits(Acquisition_Cost = Nilai_aset, Residual_Cost =
 
 #---------------------------------------------------------KALKULATOR DEPRESIASI OLEH BADAR WIRYAWAN-----------------------------------------------------------
 
-def depresiasi_declining_balance(Acquisition_Cost = Nilai_aset, Residual_Cost = Nilai_residu, Useful_life = Masa_manfaat):
-
-    #KOLOM 01
-
-    daftar_tahun = []
-
-    for a in range(Useful_life+1):
-        daftar_tahun.append(a)
-
-    #KOLOM 02
-
-    daftar_faktor_declining = [0]
-
-    for b in range(Useful_life): 
-        faktor_declining = 2 * ((Acquisition_Cost - Residual_Cost) / Useful_life) / (((Acquisition_Cost - Residual_Cost) / Useful_life) * Useful_life)
-        daftar_faktor_declining.append(faktor_declining)
-
-    #KOLOM 03, 04, 05
-
-    daftar_beban_depresiasi = [0]
-    daftar_akumulasi_depresiasi = [0]
-    daftar_nilai_buku = [Acquisition_Cost]
-
-    for c in range(Useful_life - 1):
-        beban_depresiasi = daftar_nilai_buku[c] * daftar_faktor_declining[c+1]
-        daftar_beban_depresiasi.append(beban_depresiasi)
-
-        Dummy_akumulasi = daftar_akumulasi_depresiasi[c]
-        Dummy_akumulasi += daftar_beban_depresiasi[c + 1]
-        daftar_akumulasi_depresiasi.append(Dummy_akumulasi)
-
-        Nilai_buku_baru = daftar_nilai_buku[c] - daftar_beban_depresiasi[c + 1]
-        daftar_nilai_buku.append(Nilai_buku_baru)
-
-    daftar_nilai_buku.append(Residual_Cost)
-
-    limited_depreciation = daftar_nilai_buku[Useful_life - 1] - daftar_nilai_buku [Useful_life]
-    daftar_beban_depresiasi.append(limited_depreciation)
-
-    akumulasi_akhir = daftar_akumulasi_depresiasi[Useful_life - 1] + daftar_beban_depresiasi[Useful_life]
-    daftar_akumulasi_depresiasi.append(akumulasi_akhir)
-
-    tables = {"TAHUN": daftar_tahun, 
-              "FAKTOR DECLINING": daftar_faktor_declining, 
-              "BEBAN DEPRESIASI": daftar_beban_depresiasi, 
-              "AKUMULASI DEPRESIASI": daftar_akumulasi_depresiasi, 
-              "NILAI BUKU": daftar_nilai_buku}
-    data = pd.DataFrame(tables)
-
-    Konfirmasi_Cetak = input("Ingin Mencetak Hasil (Y/N)?: ")
-    if Konfirmasi_Cetak == "Y":
-        data.to_csv("Kalkulasi_Depresiasi_Declining_Balance.csv")
-    elif Konfirmasi_Cetak == "N":
-        print(data)
-
-        Konfirmasi_Cetak = input("Apakah Anda ingin mencetaknya kali ini (Y/N)?: ")
-
-        if Konfirmasi_Cetak == "Y":
-            data.to_csv("Kalkulasi_Depresiasi_Declining_Balance.csv")
-        elif Konfirmasi_Cetak == "N":
-            print("Baiklah :)")
-
-#---------------------------------------------------------KALKULATOR DEPRESIASI OLEH BADAR WIRYAWAN-----------------------------------------------------------
-
 if Metode_Depresiasi == "1":
     print(depresiasi_garis_lurus())
 elif Metode_Depresiasi == "2":
     print(depresiasi_sum_of_year_digits())
-elif Metode_Depresiasi == "3":
-    print(depresiasi_declining_balance()) 
  
 #---------------------------------------------------------KALKULATOR DEPRESIASI OLEH BADAR WIRYAWAN-----------------------------------------------------------
