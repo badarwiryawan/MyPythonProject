@@ -11,7 +11,7 @@ import yfinance as yf
 #-------------------------------------------ACCOUNTING DATA MINER OLEH BADAR WIRYAWAN-------------------------------------------
 
 equity = input("Masukkan kode saham: ")
-acc_data = input("Pilih informasi (Neraca = 1, Laba Rugi = 2, Arus Kas = 3): ")
+acc_data = input("Pilih informasi (Posisi Keuangan = 1, Laba Rugi = 2, Arus Kas = 3): ")
 
 #-------------------------------------------ACCOUNTING DATA MINER OLEH BADAR WIRYAWAN-------------------------------------------
 
