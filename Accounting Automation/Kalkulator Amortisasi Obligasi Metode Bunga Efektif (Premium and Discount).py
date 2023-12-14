@@ -6,6 +6,11 @@
 #---------------------------------------------------------KALKULATOR AMORTISASI OBLIGASI METODE BUNGA EFEKTIF OLEH BADAR WIRYAWAN------------------------------------------------------------------------
 
 import pandas as pd
+import datetime
+from datetime import datetime
+import locale
+
+locale.setlocale(locale.LC_ALL, "id_ID")
 
 Nilai_Nominal = float(input("Masukkan nilai nominal obligasi: "))
 Bunga_Nominal = float(input("Masukkan bunga nominal obligasi: "))
