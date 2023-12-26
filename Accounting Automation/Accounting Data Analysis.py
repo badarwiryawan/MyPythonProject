@@ -12,7 +12,7 @@ import yfinance as yf
 
 equity = input("Insert IDX Stock Ticker: ")
 year = int(input("Insert The Report Year: "))
-data_to_analysis = input("Select Analysis (1 = Profitability, 2 = Liquidity): ")
+data_to_analysis = input("Select Analysis (1 = Profitability, 2 = Liquidity, 3 = Altman Z-Score): ")
 
 #-------------------------------------------ACCOUNTING DATA ANALYSIS BY BADAR WIRYAWAN-----------------------------------------------
    
@@ -62,6 +62,32 @@ def liquidity_analysis(Year = year):
 
     print(f"{equity} Quick Ratio = {QR}")
 
+def altman_score(Ticker = equity, Year = year):
+
+    data_stock = yf.download(tickers=Ticker+".JK", start=f"{Year}-12-24", end=f"{Year+1}-01-01")
+    table_stock = pd.DataFrame(data_stock)
+    latest_close = table_stock["Close"].iloc[-1]
+
+    first_common_factor = 1 / reverse_tables00.at["TotalAssets", f"{Year}-12-31"] 
+    working_capital = 1.2 * reverse_tables00.at["WorkingCapital", f"{Year}-12-31"]
+    retained_earnings = 1.4 * reverse_tables00.at["RetainedEarnings", f"{Year}-12-31"]
+    the_EBIT = 3.3 * reverse_tables01.at["EBIT", f"{Year}-12-31"]
+    second_common_factor = 1 / reverse_tables00.at["TotalLiabilitiesNetMinorityInterest", f"{Year}-12-31"]
+    market_cap = 0.6 * reverse_tables00.at["OrdinarySharesNumber", f"{Year}-12-31"] * latest_close 
+    revenue = 0.99 * reverse_tables01.at["OperatingRevenue", f"{Year}-12-31"]
+
+    altman_z_score = (first_common_factor * (working_capital + retained_earnings + the_EBIT)) + (second_common_factor * (market_cap + revenue))
+
+    if altman_z_score > 3.00:
+        print(f"Altman Z-Score = {altman_z_score}")
+        print("Company is healthy and there's low bankruptcy potential in the short term.")
+    elif 2.99 > altman_z_score > 1.80:
+        print(f"Altman Z-Score = {altman_z_score}")
+        print("Gray area-company is exposed to some risk of bankruptcy; caution is advised.")
+    elif 1.80 > altman_z_score:
+        print(f"Altman Z-Score = {altman_z_score}")
+        print("Company is in financial distress and there's high bankruptcy potential in short term.")
+
 #-------------------------------------------ACCOUNTING DATA ANALYSIS BY BADAR WIRYAWAN-----------------------------------------------
 
 if data_to_analysis == "1":
@@ -75,5 +101,11 @@ elif data_to_analysis == "2":
     print(f"THE {str(year)} {equity} LIQUIDITY ANALYSIS")
     print(" ")
     print(liquidity_analysis())
+
+elif data_to_analysis == "3":
+    print("\n")
+    print(f"THE {str(year)} {equity} ALTMAN Z-SCORE")
+    print(" ")
+    print(altman_score())
 
 #-------------------------------------------ACCOUNTING DATA ANALYSIS BY BADAR WIRYAWAN-----------------------------------------------
