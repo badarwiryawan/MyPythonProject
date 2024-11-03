@@ -32,8 +32,8 @@ print("DURBIN-WATSON THRESHOLD (0.95 Conf. Interval)")
 print(f"Observasi = {Observasi}, Variabel Independen = {Variabel_Independen}")
 print(" ")
 print(f"Batas bawah (dL) = {dL}")
-print(f"Batas atas (dU) = {dU}")
-print(f"4-dU = {4-dU}")
+print("Batas atas (dU)" + " " * 2 + f"= {dU}")
+print("4-dU" + " " * 13 + f"= {4-dU}")
 print("-----------------------------------------------")
 
 #------------------------------------DURBIN WATSON THRESHOLD BY BADAR WIRYAWAN-------------------------------------
