@@ -28,7 +28,7 @@ dU = data["dU"].iloc[locate[0]]
 #------------------------------------DURBIN WATSON THRESHOLD BY BADAR WIRYAWAN-------------------------------------
 
 print("-----------------------------------------------")
-print("DURBIN WATSON THRESHOLD (0,95 Conf. Interval)")
+print("DURBIN-WATSON THRESHOLD (0.95 Conf. Interval)")
 print(f"Observasi = {Observasi}, Variabel Independen = {Variabel_Independen}")
 print(" ")
 print(f"Batas bawah (dL) = {dL}")
