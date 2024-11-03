@@ -5,7 +5,7 @@ import pandas as pd
 #------------------------------------DURBIN WATSON THRESHOLD BY BADAR WIRYAWAN-------------------------------------
 
 #JUMLAH MAKSIMUM OBSERVASI = 2000
-#JUMLAH MAKSIMUM VARIABEL INDEPENDEN = 21
+#JUMLAH MAKSIMUM VARIABEL INDEPENDEN = 20
 #UNTUK OBSERVASI LEBIH DARI 200, BULATKAN KE KELIPATAN 10 TERDEKAT. MISAL 223 --> 220, 277 --> 280
 
 Observasi = int(input("Jumlah Observasi = "))
@@ -28,7 +28,7 @@ dU = data["dU"].iloc[locate[0]]
 #------------------------------------DURBIN WATSON THRESHOLD BY BADAR WIRYAWAN-------------------------------------
 
 print("-----------------------------------------------")
-print("THRESHOLD DURBIN WATSON")
+print("DURBIN WATSON THRESHOLD (0,95 Conf. Interval)")
 print(f"Observasi = {Observasi}, Variabel Independen = {Variabel_Independen}")
 print(" ")
 print(f"Batas bawah (dL) = {dL}")
