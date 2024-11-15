@@ -1,20 +1,22 @@
-                     **PROOF OF CALIBRATION**
+**PROOF OF CALIBRATION**
 
 File: https://www.kaggle.com/datasets/mehmetisik/advertisingcsv/data
 
 Best Linear Unbiased Estimator (BLUE)
 
 1. Normality
-   ![IBM Statistics SPSS 27](./MyPythonProject/Quantitative Research/Proof of Calibration - Normality.png)
+  ![Proof of Calibration - Normality](https://github.com/user-attachments/assets/3492e2d9-fe6b-4cbf-8589-7fe096f8a158)
    
 2. Multicollinearity
-   ![IBM Statistics SPSS 27](./MyPythonProject/Quantitative Research/Proof of Calibration - Multicollinearity.png)
+   ![Proof of Calibration - Multicolinearity](https://github.com/user-attachments/assets/326f7e4a-9801-41a9-adbe-ac5ce6fd2595)
    
 3. Heteroskedasticity
-   ![EViews 13](./MyPythonProject/Quantitative Research/Proof of Calibration - Heteroskedasticity.png)
-   
+   ![Proof of Calibration - Heteroskedasticity](https://github.com/user-attachments/assets/302d9350-cdbb-4698-9468-484bbc625859)
+
 4. Autocorrelation
-   ![IBM Statistics SPSS 27](./MyPythonProject/Quantitative Research/Proof of Calibration - Autocorrelation.png)
+   ![Proof of Calibration - Autocorrelation](https://github.com/user-attachments/assets/9ced4679-d99c-47bd-90ce-2b04c215546c)
+
 
 Model Fit
-![EViews 13](./MyPythonProject/Quantitative Research/Proof of Calibration - Model Fit.png)
+![Proof of Calibration - Model Fit](https://github.com/user-attachments/assets/b3240f3a-e4bb-441a-a8d0-273402f41445)
+
