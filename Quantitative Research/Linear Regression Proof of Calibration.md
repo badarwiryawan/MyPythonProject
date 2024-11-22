@@ -22,6 +22,12 @@ Best Linear Unbiased Estimator (BLUE)
 
    ![Proof of Calibration - Autocorrelation](https://github.com/user-attachments/assets/9ced4679-d99c-47bd-90ce-2b04c215546c)
 
+
+Descriptive Statistics (IBM SPSS Statistics 27)
+
+![image](https://github.com/user-attachments/assets/7354c395-187d-4c1a-8125-f71f18282468)
+
+
 Model Fit Normalized (EViews 13)
 
 ![image](https://github.com/user-attachments/assets/2db8fdcc-e96b-4792-908a-23ea23d7b362)
