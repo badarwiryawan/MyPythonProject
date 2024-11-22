@@ -1,6 +1,7 @@
 **PROOF OF CALIBRATION**
 
 File: https://www.kaggle.com/datasets/mehmetisik/advertisingcsv/data
+Residual Output: https://1drv.ms/x/c/1dbe37126d0cd1a5/ESfiLBLk44NGpdvNPqJbREUBnn-L1HiUWY-znG4XpMtnxQ?e=ZB8Pkv
 
 Best Linear Unbiased Estimator (BLUE)
 
@@ -20,9 +21,7 @@ Best Linear Unbiased Estimator (BLUE)
 
    ![Proof of Calibration - Autocorrelation](https://github.com/user-attachments/assets/9ced4679-d99c-47bd-90ce-2b04c215546c)
 
-Model Fit (EViews 13)
+Model Fit Normalized (EViews 13)
 
-![Proof of Calibration - Model Fit](https://github.com/user-attachments/assets/b3240f3a-e4bb-441a-a8d0-273402f41445)
-
-Residual Output --> https://1drv.ms/x/c/1dbe37126d0cd1a5/ESfiLBLk44NGpdvNPqJbREUBnn-L1HiUWY-znG4XpMtnxQ?e=ZB8Pkv
+![image](https://github.com/user-attachments/assets/2db8fdcc-e96b-4792-908a-23ea23d7b362)
 
